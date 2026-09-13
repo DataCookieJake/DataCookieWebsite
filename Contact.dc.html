@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-d246100b-6b39-44dc-bce7-5be84bc040d6/styles.css">
+<script src="_ds/modernist-d246100b-6b39-44dc-bce7-5be84bc040d6/_ds_bundle.js"></script>
+<style>body{--color-divider:color-mix(in srgb, #201e1d 15%, transparent)}a{color:var(--color-accent-700)}a:hover{color:var(--color-accent)}h1,h2{text-wrap:pretty}</style>
+</helmet>
+
+<div style="background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)">
+<dc-import name="SiteNav" current="contact" hint-size="100%,62px"></dc-import>
+
+<div style="max-width:1300px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
+
+  <section data-screen-label="Hero" style="padding:clamp(40px,5.5vw,84px) 0 clamp(24px,3vw,40px)">
+    <h6 style="margin:0 0 clamp(16px,3vw,30px);color:var(--color-accent-700)">Book a conversation</h6>
+    <h1 style="font-size:clamp(38px,7vw,88px);line-height:0.96;letter-spacing:-0.038em;margin:0 0 24px;max-width:17ch">Start with the thing that annoys you most.</h1>
+    <p style="font-size:clamp(16px,1.6vw,21px);line-height:1.45;max-width:50ch;margin:0">Tell us about one process that takes too long, one report nobody trusts or one question your staff keep having to ask. Half an hour is usually enough to tell whether we can help.</p>
+  </section>
+
+  <section data-screen-label="Form" style="border-top:1px solid var(--color-divider);padding:clamp(36px,4.5vw,64px) 0">
+    <div style="display:flex;flex-wrap:wrap;--cell-basis:300px;gap:clamp(24px,4vw,64px)">
+
+      <div>
+        <h2 style="font-size:clamp(22px,2.4vw,30px);letter-spacing:-0.025em;margin:0 0 20px">Send us a note</h2>
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1px solid var(--color-accent-700);padding:24px">
+            <h4 style="margin:0 0 8px;color:var(--color-accent-700)">Thank you — that's with us.</h4>
+            <p style="margin:0;font-size:14.5px">We'll reply within one working day. If it's urgent, email <a href="mailto:Jake@datacookie.co.uk">Jake@datacookie.co.uk</a> directly.</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:16px;max-width:520px">
+            <div style="display:flex;flex-wrap:wrap;--cell-basis:200px;gap:16px">
+              <div class="field"><label for="dc-name">Your name</label><input class="input" id="dc-name" name="name" type="text" placeholder="Jane Okafor" required="{{ true }}"></div>
+              <div class="field"><label for="dc-org">Organisation</label><input class="input" id="dc-org" name="org" type="text" placeholder="Northfield Housing"></div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;--cell-basis:200px;gap:16px">
+              <div class="field"><label for="dc-email">Email</label><input class="input" id="dc-email" name="email" type="email" placeholder="jane@organisation.co.uk" required="{{ true }}"></div>
+              <div class="field"><label for="dc-size">Approximate headcount</label><input class="input" id="dc-size" name="size" type="text" placeholder="120"></div>
+            </div>
+            <div class="field">
+              <label>What would you like to talk about?</label>
+              <div style="display:flex;flex-direction:column;gap:10px;padding-top:4px">
+                <label class="radio"><input type="radio" name="topic" value="audit" defaultChecked="{{ true }}"><span class="dot"></span>An Operational Friction Audit</label>
+                <label class="radio"><input type="radio" name="topic" value="process"><span class="dot"></span>A specific process I want automated</label>
+                <label class="radio"><input type="radio" name="topic" value="data"><span class="dot"></span>Reporting and management information</label>
+                <label class="radio"><input type="radio" name="topic" value="ai"><span class="dot"></span>A knowledge assistant for staff</label>
+                <label class="radio"><input type="radio" name="topic" value="other"><span class="dot"></span>Something else entirely</label>
+              </div>
+            </div>
+            <div class="field"><label for="dc-detail">A little more detail</label><textarea class="input" id="dc-detail" name="detail" placeholder="The process, who it involves, roughly how often it happens and what makes it painful."></textarea></div>
+            <button class="btn btn-primary" type="submit" style="align-self:flex-start;padding:14px 20px;font-size:15px">Send it over</button>
+            <p style="margin:0;font-size:12px;color:var(--color-neutral-700)">We'll only use these details to reply to you.</p>
+          </form>
+        </sc-if>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:0;background:transparent;border:1px solid var(--color-divider);align-self:start">
+        <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:24px">
+          <h6 style="margin:0 0 10px;color:var(--color-accent-700)">Email</h6>
+          <a href="mailto:Jake@datacookie.co.uk" style="font-size:clamp(17px,1.8vw,22px);font-weight:600;font-family:var(--font-heading)">Jake@datacookie.co.uk</a>
+          <p style="margin:10px 0 0;font-size:13.5px;color:var(--color-neutral-800)">Straight to a person. Replies within one working day.</p>
+        </div>
+        <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:24px">
+          <h6 style="margin:0 0 10px;color:var(--color-accent-700)">What happens next</h6>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <p style="margin:0;font-size:14px">A 30-minute conversation about how the work currently happens.</p>
+            <p style="margin:0;font-size:14px">An honest view on whether there is enough friction to be worth addressing.</p>
+            <p style="margin:0;font-size:14px">If there is, a short proposal for a Friction Audit.</p>
+          </div>
+        </div>
+        <div style="background:var(--color-surface);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:24px">
+          <h6 style="margin:0 0 10px;color:var(--color-neutral-700)">No obligation</h6>
+          <p style="margin:0;font-size:14px;color:var(--color-neutral-800)">If the sensible next step is something we do not do, we will tell you that instead of selling you something adjacent.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="border-top:1px solid var(--color-divider);padding:clamp(36px,4.5vw,64px) 0 clamp(52px,6vw,88px)">
+    <p style="margin:0;font-family:var(--font-heading);font-weight:800;font-size:clamp(24px,3.4vw,44px);line-height:1.05;letter-spacing:-0.03em;max-width:22ch">Make work work better.</p>
+  </section>
+
+</div>
+<dc-import name="SiteFooter" hint-size="100%,280px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

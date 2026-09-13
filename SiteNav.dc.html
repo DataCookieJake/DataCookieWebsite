@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-d246100b-6b39-44dc-bce7-5be84bc040d6/styles.css">
+<script src="_ds/modernist-d246100b-6b39-44dc-bce7-5be84bc040d6/_ds_bundle.js"></script>
+<style>.nav a:hover, .nav a[aria-current='page'] { color: var(--color-accent-700); }</style>
+</helmet>
+<div style="position:sticky;top:0;z-index:40;background:var(--color-bg);border-bottom:1px solid var(--color-divider)">
+  <div style="max-width:1300px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
+    <nav class="nav" style="padding:15px 0;border-bottom:0;gap:clamp(12px,2.2vw,28px);flex-wrap:wrap">
+      <a class="nav-brand" href="Home.dc.html" style="color:var(--color-text);text-decoration:none;letter-spacing:-0.035em;font-size:20px;display:flex;align-items:center;gap:7px">
+        <span style="width:13px;height:13px;background:var(--color-accent);display:block"></span>Data Cookie
+      </a>
+
+      <div style="position:relative;display:flex;align-items:center" onMouseEnter="{{ openMenu }}" onMouseLeave="{{ closeMenu }}">
+        <a href="What We Do.dc.html" aria-current="{{ whatCurrent }}" style="display:inline-flex;align-items:center;gap:5px;padding:6px 0">What we do
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;top:100%;left:-16px;min-width:266px;background:var(--color-bg);border:1px solid var(--color-divider);display:flex;flex-direction:column">
+            <a href="Workflow Engineering.dc.html" style="padding:13px 16px;border-bottom:1px solid var(--color-divider);font-size:14px" style-hover="background:var(--color-surface)"><span style="color:var(--color-accent-700);font-size:11px;letter-spacing:0.08em;display:block;margin-bottom:2px">01</span>Workflow Engineering</a>
+            <a href="Data and Decision Intelligence.dc.html" style="padding:13px 16px;border-bottom:1px solid var(--color-divider);font-size:14px" style-hover="background:var(--color-surface)"><span style="color:var(--color-accent-700);font-size:11px;letter-spacing:0.08em;display:block;margin-bottom:2px">02</span>Data &amp; Decision Intelligence</a>
+            <a href="AI and Knowledge Agents.dc.html" style="padding:13px 16px;font-size:14px" style-hover="background:var(--color-surface)"><span style="color:var(--color-accent-700);font-size:11px;letter-spacing:0.08em;display:block;margin-bottom:2px">03</span>AI &amp; Knowledge Agents</a>
+          </div>
+        </sc-if>
+      </div>
+
+      <a href="How We Work.dc.html" aria-current="{{ howCurrent }}">How we work</a>
+      <a href="Operational Friction Audit.dc.html" aria-current="{{ auditCurrent }}">Friction Audit</a>
+      <a href="About.dc.html" aria-current="{{ aboutCurrent }}">About</a>
+      <a class="btn btn-primary" href="Contact.dc.html" style="padding:10px 16px;background:var(--color-accent-700);color:var(--color-bg)">Book a conversation</a>
+    </nav>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;current&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;what&quot;,&quot;workflow&quot;,&quot;data&quot;,&quot;ai&quot;,&quot;how&quot;,&quot;audit&quot;,&quot;about&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { menuOpen: false };
+  cur(name) { return this.props.current === name ? 'page' : undefined; }
+  renderVals() {
+    return {
+      menuOpen: this.state.menuOpen,
+      openMenu: () => this.setState({ menuOpen: true }),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      whatCurrent: ['what', 'workflow', 'data', 'ai'].includes(this.props.current) ? 'page' : undefined,
+      howCurrent: this.cur('how'),
+      auditCurrent: this.cur('audit'),
+      aboutCurrent: this.cur('about')
+    };
+  }
+}
+</script>
+</body>
+</html>

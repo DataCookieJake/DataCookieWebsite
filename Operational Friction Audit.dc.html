@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-d246100b-6b39-44dc-bce7-5be84bc040d6/styles.css">
+<script src="_ds/modernist-d246100b-6b39-44dc-bce7-5be84bc040d6/_ds_bundle.js"></script>
+<style>.table th{border-bottom-width:1px}body{--color-divider:color-mix(in srgb, #201e1d 15%, transparent)}a{color:var(--color-accent-700)}a:hover{color:var(--color-accent)}h1,h2{text-wrap:pretty}</style>
+</helmet>
+
+<div style="background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)">
+<dc-import name="SiteNav" current="audit" hint-size="100%,62px"></dc-import>
+
+<div style="max-width:1300px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
+
+  <section data-screen-label="Hero" style="padding:clamp(40px,5.5vw,84px) 0 clamp(28px,3.5vw,48px)">
+    <h6 style="margin:0 0 clamp(16px,3vw,30px);color:var(--color-accent-700)">The entry engagement</h6>
+    <h1 style="font-size:clamp(40px,7.6vw,96px);line-height:0.95;letter-spacing:-0.038em;margin:0 0 24px;max-width:15ch">The Operational Friction Audit</h1>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(20px,4vw,48px);align-items:end">
+      <p style="font-size:clamp(16px,1.6vw,21px);line-height:1.45;margin:0">A low-risk way to find out where your organisation is losing time, information and money — and what it would take to stop.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="Contact.dc.html" style="background:var(--color-accent-700);color:var(--color-bg);padding:14px 20px;font-size:15px">Book an audit conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="What we look for" style="border-top:1px solid var(--color-divider);padding:clamp(40px,5vw,76px) 0">
+    <h6 style="margin:0 0 16px;color:var(--color-accent-700)">What we look for</h6>
+    <h2 style="font-size:clamp(27px,3.8vw,48px);line-height:1.03;letter-spacing:-0.03em;margin:0 0 clamp(22px,3vw,34px);max-width:24ch">We spend time understanding how the organisation actually operates.</h2>
+    <div style="display:flex;flex-wrap:wrap;--cell-basis:220px;gap:0;background:transparent;border:1px solid var(--color-divider)">
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:20px;font-size:14.5px">Manual processes</div>
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:20px;font-size:14.5px">Duplicate work</div>
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:20px;font-size:14.5px">Spreadsheet dependencies</div>
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:20px;font-size:14.5px">System integration gaps</div>
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:20px;font-size:14.5px">Data-quality problems</div>
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:20px;font-size:14.5px">Reporting bottlenecks</div>
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:20px;font-size:14.5px">Knowledge-management problems</div>
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:20px;font-size:14.5px">Automation opportunities</div>
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:20px;font-size:14.5px">Appropriate AI use cases</div>
+    </div>
+  </section>
+
+  <section data-screen-label="Assessment" style="border-top:1px solid var(--color-divider);padding:clamp(40px,5vw,76px) 0">
+    <h6 style="margin:0 0 16px;color:var(--color-accent-700)">How each opportunity is assessed</h6>
+    <h2 style="font-size:clamp(27px,3.8vw,48px);line-height:1.03;letter-spacing:-0.03em;margin:0 0 clamp(22px,3vw,34px);max-width:22ch">Every finding is scored the same way.</h2>
+    <div style="overflow-x:auto">
+      <table class="table" style="min-width:720px">
+        <thead>
+          <tr>
+            <th>Current effort</th><th>Problem</th><th>Proposed intervention</th><th>Complexity</th><th>Potential benefit</th><th>Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hours per week, by role</td><td>What it costs, causes or risks</td><td>Redesign, integrate, automate or assist</td><td><span class="tag tag-neutral">Low / medium / high</span></td><td>Time, cost, accuracy, speed, compliance</td><td><span class="tag tag-accent">Ranked</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin:18px 0 0;font-size:15px;line-height:1.65;max-width:70ch">Assessing everything consistently means the roadmap is a genuine order of work rather than a list of ideas — the cheap, high-benefit items get done first, and the expensive ones get made deliberately.</p>
+  </section>
+
+  <section data-screen-label="Deliverable" style="border-top:1px solid var(--color-divider);padding:clamp(40px,5vw,76px) 0">
+    <div style="background:var(--color-neutral-900);color:var(--color-neutral-100);padding:clamp(26px,3.5vw,48px)">
+      <h6 style="margin:0 0 16px;color:var(--color-accent-400)">What you receive</h6>
+      <h2 style="font-size:clamp(28px,4.6vw,60px);line-height:1;letter-spacing:-0.035em;margin:0 0 22px;max-width:20ch">A prioritised transformation roadmap.</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;max-width:1000px">
+        <p style="flex:1 1 var(--cell-basis,190px);margin:0;font-size:15px;line-height:1.6">A map of how work currently moves through the organisation, including the undocumented parts.</p>
+        <p style="flex:1 1 var(--cell-basis,190px);margin:0;font-size:15px;line-height:1.6">A register of friction points, each with an estimate of what it currently costs you.</p>
+        <p style="flex:1 1 var(--cell-basis,190px);margin:0;font-size:15px;line-height:1.6">A recommended sequence of interventions, with complexity and expected benefit.</p>
+        <p style="flex:1 1 var(--cell-basis,190px);margin:0;font-size:15px;line-height:1.6">A first candidate to prototype — something provable in weeks, not quarters.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Progression" style="padding:clamp(40px,5vw,76px) 0">
+    <h6 style="margin:0 0 16px;color:var(--color-accent-700)">Where it leads</h6>
+    <div style="display:flex;flex-wrap:wrap;--cell-basis:150px;gap:0;background:transparent;border:1px solid var(--color-divider)">
+      <div style="background:var(--color-surface);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:22px"><p style="margin:0 0 6px;font-family:var(--font-heading);font-weight:800;font-size:18px">Audit</p><p style="margin:0;font-size:13px;color:var(--color-neutral-800)">You are here.</p></div>
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:22px"><p style="margin:0 0 6px;font-family:var(--font-heading);font-weight:800;font-size:18px">Prototype</p><p style="margin:0;font-size:13px;color:var(--color-neutral-800)">Prove one opportunity.</p></div>
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:22px"><p style="margin:0 0 6px;font-family:var(--font-heading);font-weight:800;font-size:18px">Implementation</p><p style="margin:0;font-size:13px;color:var(--color-neutral-800)">Build and hand over.</p></div>
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:22px"><p style="margin:0 0 6px;font-family:var(--font-heading);font-weight:800;font-size:18px">Wider transformation</p><p style="margin:0;font-size:13px;color:var(--color-neutral-800)">Work the roadmap.</p></div>
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:22px"><p style="margin:0 0 6px;font-family:var(--font-heading);font-weight:800;font-size:18px">Optimisation</p><p style="margin:0;font-size:13px;color:var(--color-neutral-800)">Keep improving.</p></div>
+    </div>
+    <p style="margin:18px 0 0;font-size:14.5px;color:var(--color-neutral-800);max-width:64ch">There is no obligation to continue past the audit. If the roadmap says the sensible next step is something we do not do, we will say so.</p>
+  </section>
+
+  <section data-screen-label="Suited" style="border-top:1px solid var(--color-divider);padding:clamp(40px,5vw,72px) 0">
+    <div style="display:flex;flex-wrap:wrap;--cell-basis:300px;gap:0;background:transparent;border:1px solid var(--color-divider)">
+      <div style="background:var(--color-bg);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:clamp(22px,2.6vw,32px)">
+        <h6 style="margin:0 0 14px;color:var(--color-accent-700)">A good fit if</h6>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <p style="margin:0;font-size:14.5px">You suspect there is significant waste but cannot yet evidence it.</p>
+          <p style="margin:0;font-size:14.5px">Your team is busy but growth has stalled on capacity, not demand.</p>
+          <p style="margin:0;font-size:14.5px">You have bought systems that are not delivering what was promised.</p>
+          <p style="margin:0;font-size:14.5px">You want a plan before you commit budget.</p>
+        </div>
+      </div>
+      <div style="background:var(--color-surface);flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:clamp(22px,2.6vw,32px)">
+        <h6 style="margin:0 0 14px;color:var(--color-neutral-700)">Probably not yet if</h6>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <p style="margin:0;font-size:14.5px;color:var(--color-neutral-800)">You already know exactly what you want built — then let's just talk about building it.</p>
+          <p style="margin:0;font-size:14.5px;color:var(--color-neutral-800)">A major system replacement is mid-flight and the target state is still moving.</p>
+          <p style="margin:0;font-size:14.5px;color:var(--color-neutral-800)">Nobody internally has capacity to talk to us for a few hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid var(--color-divider);padding:clamp(36px,4.5vw,68px) 0 clamp(52px,6vw,88px);display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+    <h2 style="margin:0;font-size:clamp(24px,3vw,38px);letter-spacing:-0.03em;max-width:26ch">Find the friction in your organisation.</h2>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a class="btn btn-primary" href="Contact.dc.html" style="background:var(--color-accent-700);color:var(--color-bg);padding:14px 20px;font-size:15px">Book a conversation</a>
+      <a class="btn btn-secondary" href="mailto:Jake@datacookie.co.uk" style="padding:14px 20px;font-size:15px">Jake@datacookie.co.uk</a>
+    </div>
+  </section>
+
+</div>
+<dc-import name="SiteFooter" hint-size="100%,280px"></dc-import>
+</div>
+
+</x-dc>
+</body>
+</html>
