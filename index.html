@@ -10,12 +10,14 @@
 <helmet>
 <link rel="stylesheet" href="_ds/modernist-d246100b-6b39-44dc-bce7-5be84bc040d6/styles.css">
 <script src="_ds/modernist-d246100b-6b39-44dc-bce7-5be84bc040d6/_ds_bundle.js"></script>
-<script src="./image-slot.js"></script>
 <style>
   body { --color-divider: color-mix(in srgb, #201e1d 15%, transparent); }
   a { color: var(--color-accent-700); }
   a:hover { color: var(--color-accent); }
   h1, h2 { text-wrap: pretty; }
+  [data-grid3] { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 860px) { [data-grid3] { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { [data-grid3] { grid-template-columns: 1fr; } }
 </style>
 </helmet>
 
@@ -57,7 +59,7 @@
       </div>
       <p style="font-size:clamp(15px,1.3vw,18px);line-height:1.65;max-width:52ch;margin:0;align-self:end">It happens to every organisation that is busy and doing well: the work changes, the platforms lag behind, and people quietly fill the gaps with spreadsheets, email and goodwill. It is simply what growth looks like, and it is very fixable.</p>
     </div>
-    <div style="display:flex;flex-wrap:wrap;--cell-basis:248px;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+    <div data-grid3 style="border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:22px"><p style="margin:0;font-size:15px;line-height:1.6">The same information is typed into three different systems.</p></div>
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:22px"><p style="margin:0;font-size:15px;line-height:1.6">Excel is quietly holding a core business process together.</p></div>
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:22px"><p style="margin:0;font-size:15px;line-height:1.6">Approvals move at the speed of somebody's inbox.</p></div>
@@ -183,55 +185,71 @@
     <h6 style="margin:0 0 20px;color:var(--color-accent-700)">We build on platforms you already own — or ones worth owning</h6>
     <div style="display:flex;flex-wrap:wrap;--cell-basis:200px;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
-        <image-slot id="logo-m365" style="width:100%;height:68px" shape="rect" fit="contain" placeholder="Logo"></image-slot>
+        <img src="logos/microsoft-365.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
         <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Microsoft 365</p>
       </div>
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
-        <image-slot id="logo-sharepoint" style="width:100%;height:68px" shape="rect" fit="contain" placeholder="Logo"></image-slot>
+        <img src="logos/sharepoint.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
         <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">SharePoint</p>
       </div>
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
-        <image-slot id="logo-power-automate" style="width:100%;height:68px" shape="rect" fit="contain" placeholder="Logo"></image-slot>
+        <img src="logos/power-automate.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
         <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Power Automate</p>
       </div>
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
-        <image-slot id="logo-power-apps" style="width:100%;height:68px" shape="rect" fit="contain" placeholder="Logo"></image-slot>
+        <img src="logos/power-apps.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
         <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Power Apps</p>
       </div>
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
-        <image-slot id="logo-power-bi" style="width:100%;height:68px" shape="rect" fit="contain" placeholder="Logo"></image-slot>
+        <img src="logos/power-bi.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
         <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Power BI</p>
       </div>
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
-        <image-slot id="logo-fabric" style="width:100%;height:68px" shape="rect" fit="contain" placeholder="Logo"></image-slot>
+        <img src="logos/microsoft-fabric.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
         <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Microsoft Fabric</p>
       </div>
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
-        <image-slot id="logo-azure" style="width:100%;height:68px" shape="rect" fit="contain" placeholder="Logo"></image-slot>
+        <img src="logos/netsuite.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
+        <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">NetSuite</p>
+      </div>
+      <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
+        <img src="logos/azure.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
         <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Azure</p>
       </div>
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
-        <image-slot id="logo-copilot" style="width:100%;height:68px" shape="rect" fit="contain" placeholder="Logo"></image-slot>
-        <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Microsoft Copilot</p>
-      </div>
-      <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
-        <image-slot id="logo-dynamics" style="width:100%;height:68px" shape="rect" fit="contain" placeholder="Logo"></image-slot>
-        <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Dynamics 365</p>
-      </div>
-      <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
-        <image-slot id="logo-sql-server" style="width:100%;height:68px" shape="rect" fit="contain" placeholder="Logo"></image-slot>
+        <img src="logos/sql-server.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
         <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">SQL Server</p>
       </div>
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
-        <image-slot id="logo-salesforce" style="width:100%;height:68px" shape="rect" fit="contain" placeholder="Logo"></image-slot>
+        <img src="logos/microsoft-copilot.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
+        <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Microsoft Copilot</p>
+      </div>
+      <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
+        <img src="logos/dynamics-365.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
+        <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Dynamics 365</p>
+      </div>
+      <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
+        <img src="logos/salesforce.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
         <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Salesforce</p>
       </div>
       <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
-        <image-slot id="logo-sage" style="width:100%;height:68px" shape="rect" fit="contain" placeholder="Logo"></image-slot>
+        <img src="logos/hubspot.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
+        <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">HubSpot</p>
+      </div>
+      <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
+        <img src="logos/workday.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
+        <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Workday</p>
+      </div>
+      <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
+        <img src="logos/sage.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
         <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Sage</p>
       </div>
+      <div style="flex:1 1 var(--cell-basis,230px);box-shadow:0 0 0 1px var(--color-divider);padding:18px;display:flex;flex-direction:column;gap:10px">
+        <img src="logos/xero.svg" alt="" style="display:block;width:auto;height:44px;max-width:100%;object-fit:contain;object-position:left center">
+        <p style="margin:0;font-size:12.5px;color:var(--color-neutral-800)">Xero</p>
+      </div>
     </div>
-    <p style="margin:14px 0 0;font-size:12.5px;color:var(--color-neutral-700)">Drop each vendor's official logo file into its cell — platform names are trademarks of their respective owners.</p>
+    <p style="margin:14px 0 0;font-size:12.5px;color:var(--color-neutral-700)">Platform names and logos are trademarks of their respective owners.</p>
   </section>
 
   <section data-screen-label="Audit CTA" style="border-top:1px solid var(--color-divider);padding:clamp(48px,6vw,88px) 0 clamp(56px,7vw,96px)">

@@ -10,15 +10,28 @@
 <helmet>
 <link rel="stylesheet" href="_ds/modernist-d246100b-6b39-44dc-bce7-5be84bc040d6/styles.css">
 <script src="_ds/modernist-d246100b-6b39-44dc-bce7-5be84bc040d6/_ds_bundle.js"></script>
-<style>.nav a:hover, .nav a[aria-current='page'] { color: var(--color-accent-700); }</style>
+<style>
+  .nav a:hover, .nav a[aria-current='page'] { color: var(--color-accent-700); }
+  [data-nav-links] { display: flex; align-items: center; gap: clamp(12px, 2.2vw, 28px); flex-wrap: wrap; }
+  @media (max-width: 720px) {
+    [data-nav-cta] { order: 2; margin-left: auto; padding: 9px 13px; font-size: 13px; }
+    [data-nav-links] { order: 3; flex-basis: 100%; padding-top: 10px; gap: 16px; }
+    [data-nav-brand] { font-size: 17px !important; }
+    [data-cta-long] { display: none; }
+  }
+  @media (min-width: 721px) {
+    [data-cta-short] { display: none; }
+  }
+</style>
 </helmet>
 <div style="position:sticky;top:0;z-index:40;background:var(--color-bg);border-bottom:1px solid var(--color-divider)">
   <div style="max-width:1300px;margin:0 auto;padding:0 clamp(20px,4vw,48px)">
     <nav class="nav" style="padding:15px 0;border-bottom:0;gap:clamp(12px,2.2vw,28px);flex-wrap:wrap">
-      <a class="nav-brand" href="index.html" style="color:var(--color-text);text-decoration:none;letter-spacing:-0.035em;font-size:20px;display:flex;align-items:center;gap:7px">
+      <a data-nav-brand class="nav-brand" href="index.html" style="color:var(--color-text);text-decoration:none;letter-spacing:-0.035em;font-size:20px;display:flex;align-items:center;gap:7px">
         <span style="width:13px;height:13px;background:var(--color-accent);display:block"></span>Data Cookie
       </a>
 
+      <div data-nav-links>
       <div style="position:relative;display:flex;align-items:center" onMouseEnter="{{ openMenu }}" onMouseLeave="{{ closeMenu }}">
         <a href="What We Do.dc.html" aria-current="{{ whatCurrent }}" style="display:inline-flex;align-items:center;gap:5px;padding:6px 0">What we do
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -35,7 +48,8 @@
       <a href="How We Work.dc.html" aria-current="{{ howCurrent }}">How we work</a>
       <a href="Operational Friction Audit.dc.html" aria-current="{{ auditCurrent }}">Friction Audit</a>
       <a href="About.dc.html" aria-current="{{ aboutCurrent }}">About</a>
-      <a class="btn btn-primary" href="Contact.dc.html" style="padding:10px 16px;background:var(--color-accent-700);color:var(--color-bg)">Book a conversation</a>
+      </div>
+      <a data-nav-cta class="btn btn-primary" href="Contact.dc.html" style="padding:10px 16px;background:var(--color-accent-700);color:var(--color-bg)"><span data-cta-long>Book a conversation</span><span data-cta-short>Book a call</span></a>
     </nav>
   </div>
 </div>
