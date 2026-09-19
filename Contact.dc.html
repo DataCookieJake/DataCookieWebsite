@@ -38,7 +38,7 @@
           </div>
         </sc-if>
         <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
-          <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:16px;max-width:520px">
+          <form onSubmit="{{ submit }}" action="https://formspree.io/f/xoevjqaa" method="POST" style="display:flex;flex-direction:column;gap:16px;max-width:520px">
             <div style="display:flex;flex-wrap:wrap;--cell-basis:200px;gap:16px">
               <div class="field"><label for="dc-name">Your name</label><input class="input" id="dc-name" name="name" type="text" placeholder="Jane Okafor" required="{{ true }}"></div>
               <div class="field"><label for="dc-org">Organisation</label><input class="input" id="dc-org" name="org" type="text" placeholder="Northfield Housing"></div>
