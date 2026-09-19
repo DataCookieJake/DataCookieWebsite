@@ -103,7 +103,25 @@ class Component extends DCLogic {
     return {
       sent: this.state.sent,
       notSent: !this.state.sent,
-      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+      submit: (e) => {
+        e.preventDefault();
+        const form = e.target;
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        })
+          .then((res) => {
+            if (res.ok) {
+              this.setState({ sent: true });
+            } else {
+              alert("Something went wrong sending your message — please email us directly at Jake@datacookie.co.uk");
+            }
+          })
+          .catch(() => {
+            alert("Something went wrong sending your message — please email us directly at Jake@datacookie.co.uk");
+          });
+      }
     };
   }
 }
